@@ -62,6 +62,7 @@ body {
     float: right;
 }
 
+/* 우측 고정 메뉴 */
 .fix-menu {
     position: fixed;
     right: 0;
@@ -69,7 +70,7 @@ body {
     display: block;
     width: 8.5rem;
     background-color: #fff;
-    border: 0.1rem solid #ddd;
+    border: 1px solid #ddd;
     box-shadow: 0 4px 9px 0 rgb(0 0 0 / 10%);
     border-radius: 2rem;
     z-index: 9;
@@ -83,17 +84,17 @@ body {
     display: block;
 }
 
-.fix-menu ul > li {
+.fix-menu ul>li {
     position: relative;
     display: block;
     margin-bottom: 1.5rem;
 }
 
-.fix-menu ul > li:last-child {
+.fix-menu ul>li:last-child {
     margin-bottom: 0;
 }
 
-.fix-menu ul > li > a {
+.fix-menu ul>li>a {
     position: relative;
     display: block;
     font-size: 1.3rem;
@@ -119,7 +120,7 @@ body {
     position: relative;
     display: block;
     width: 3.6rem;
-    height: 2.5rem;
+    height: 2.9rem;
     background: url('../images/icoFloating.png') no-repeat;
     background-position: 0 -3.4rem;
     margin: 0 auto;
@@ -130,7 +131,7 @@ body {
     position: relative;
     display: block;
     width: 3.6rem;
-    height: 2.8rem;
+    height: 3.0rem;
     background: url('../images/icoFloating.png') no-repeat;
     background-position: 0 -6.4rem;
     margin: 0 auto;
@@ -148,10 +149,11 @@ body {
 }
 
 .fix-menu a::after {
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
 }
 
-.fix-menu ul > li > a > img {
+
+.fix-menu ul>li>a>img {
     width: 5rem;
     height: 5rem;
 }
@@ -160,16 +162,18 @@ body {
     position: relative;
     display: block;
     width: 100%;
+
     background-color: #000;
     border: none;
     color: #fff;
     line-height: 3rem;
     font-size: 1.1rem;
     font-weight: 400;
-    letter-spacing: -0.0245rem;
+    letter-spacing: -0.0275rem;
     border-radius: 0 0 2rem 2rem;
     cursor: pointer;
-    text-decoration: uppercase;
+    text-transform: uppercase;
+
     margin-top: 2rem;
 }
 
@@ -185,6 +189,21 @@ body {
     display: block;
     border-bottom: 0.1rem solid #ddd;
     z-index: 999;
+}
+
+.header-fix {
+    position: fixed;
+    left: 0;
+    top: -7rem;
+
+    display: block;
+    width: 100%;
+    background-color: #fff;
+}
+
+.body-fix {
+    padding-top: 11rem;
+
 }
 
 .header-top {
@@ -285,10 +304,13 @@ body {
     /* margin-right: 0.5rem; */
 }
 
+.center-menu-active::after {}
+
 .center-submenu {
     position: absolute;
     left: 50%;
     top: 2.5rem;
+    display: none;
     z-index: 3;
     margin-left: 0.5rem;
     padding: 1rem 2rem 2rem 2rem;
@@ -296,7 +318,7 @@ body {
     border: 0.1rem solid #ddd;
     box-shadow: 0 0.3rem 0.6rem 0 rgb(0 0 0 / 16%);
     transform: translateX(-50%);
-    display: none;
+
 }
 
 .center-submenu>li {
@@ -455,12 +477,11 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: 3.8rem;
-    display: block;
+    display: none;
     background-color: #fff;
     padding: 1.5rem 2.0rem;
     border: 0.1rem solid #ddd;
     box-shadow: 0 0.3rem 0.6rem 0 rgb(0 0 0 / 16%);
-    display: none;
 }
 
 .category-list-2>li {
@@ -555,7 +576,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     top: 3.8rem;
-    display: block;
+    display: none;
     background-color: #fff;
     padding: 1.5rem 2.0rem;
     border: 0.1rem solid #ddd;
@@ -1645,6 +1666,7 @@ body {
     padding: 8rem 0;
     background-color: #f3f9f0;
 }
+
 .brand-box {
     position: relative;
     display: block;
@@ -1773,9 +1795,11 @@ body {
     width: 90rem;
     height: 28.5rem;
 }
-.sw-brand { 
-    height: 100%;   
+
+.sw-brand {
+    height: 100%;
 }
+
 .brand-active {
     position: relative;
     display: block;
@@ -1791,6 +1815,7 @@ body {
     height: 100%;
     text-align: center;
 }
+
 .active-box-img {
     display: block;
 }
@@ -1804,6 +1829,7 @@ body {
     line-height: 1.5;
     margin-top: 1.5rem;
 }
+
 .active-box-txt {
     position: relative;
     display: block;
@@ -1813,18 +1839,22 @@ body {
 
     margin-top: 3rem;
 }
-.active-box-txt > li {
+
+.active-box-txt>li {
     position: relative;
     display: block;
-    width: 50%; 
+    width: 50%;
     float: left;
     border-right: 1px solid #e2e2e2;
 }
-.active-box-txt > li:last-child {
+
+.active-box-txt>li:last-child {
     border-right: 0;
 }
-.active-box-txt > li > dl {}
-.active-box-txt > li > dl > dt {
+
+.active-box-txt>li>dl {}
+
+.active-box-txt>li>dl>dt {
     color: #666;
     font-size: 1.6rem;
     font-weight: 400;
@@ -1833,7 +1863,7 @@ body {
     padding-top: 0.3rem;
 }
 
-.active-box-txt > li > dl > dd {
+.active-box-txt>li>dl>dd {
     color: #000;
     font-size: 1.8rem;
     font-weight: 500;
@@ -1841,23 +1871,28 @@ body {
     line-height: 1.5;
     white-space: nowrap;
 }
+
 /* 배너 영역 */
 .banner {
     position: relative;
     display: block;
     padding: 8rem 0;
 }
+
 .sw-banner {
     height: 22rem;
 }
+
 .sw-banner-link {
     display: block;
     height: 100%;
     overflow: hidden;
 }
+
 .sw-banner-link img {
     width: 100%;
 }
+
 .sw-banner-prev {
     position: absolute;
     left: 2rem;
@@ -1870,10 +1905,12 @@ body {
     background-position: 0 -3.4rem;
     z-index: 999;
 }
+
 .sw-banner-prev:hover {
     cursor: pointer;
     background-position: 0 0;
 }
+
 .sw-banner-next {
     position: absolute;
     right: 2rem;
@@ -1886,10 +1923,12 @@ body {
     background-position: 0 -3.4rem;
     z-index: 999;
 }
+
 .sw-banner-next:hover {
     cursor: pointer;
     background-position: 0 0;
 }
+
 /* 레시피 영역 */
 .recipe {
     position: relative;
@@ -1913,16 +1952,18 @@ body {
     font-weight: 700;
 }
 
-.recipe-wrap {  
+.recipe-wrap {
     position: relative;
-    display: block;  
+    display: block;
 }
+
 .recipe-main {
     position: relative;
     width: 79rem;
     height: 42rem;
 }
-.recipe-main > a {
+
+.recipe-main>a {
     position: relative;
     display: block;
     width: 100%;
@@ -1949,7 +1990,7 @@ body {
     padding-top: 9.5rem;
 }
 
-.recipe-main-txt {    
+.recipe-main-txt {
     position: absolute;
     left: 15.5rem;
     bottom: 0;
@@ -1963,7 +2004,7 @@ body {
     color: #333;
     letter-spacing: -0.0375rem;
     line-height: 1.48;
-    
+
     padding-left: 3rem;
     padding-top: 4rem;
 }
@@ -1979,8 +2020,9 @@ body {
     width: 34.5rem;
     height: 42rem;
 }
+
 .recipe-con-list {
-    position: relative;    
+    position: relative;
     display: block;
     width: 100%;
     height: 26.5rem;
@@ -2003,6 +2045,7 @@ body {
     margin-bottom: 1.5rem;
     padding-left: 4rem;
 }
+
 .recipe-con-item::before {
     content: '';
     position: absolute;
@@ -2014,6 +2057,7 @@ body {
     background: url('../images/inpCheck.png') no-repeat;
     background-position: 0 -3.6rem;
 }
+
 .recipe-con-link {
     position: relative;
     display: block;
@@ -2040,6 +2084,7 @@ body {
     width: 100%;
     height: auto;
 }
+
 .recipe-con-txt {
     position: relative;
     display: block;
@@ -2059,21 +2104,22 @@ body {
     font-weight: 500;
     letter-spacing: -0.05rem;
 }
+
 .recipe-con-txt em {
     font-size: 1.3rem;
     font-weight: 400;
     font-style: normal;
 }
 
-.recipe-con-count {  
-    position: relative;    
+.recipe-con-count {
+    position: relative;
     display: block;
-    width: 100%; 
+    width: 100%;
     padding: 3.5rem 0;
     font-size: 2rem;
     font-weight: 400;
     color: #000;
-    letter-spacing: -0.05rem; 
+    letter-spacing: -0.05rem;
     line-height: 1;
     padding-left: 4rem;
     border-top: 1px solid #ddd;
@@ -2088,14 +2134,15 @@ body {
     width: 1.8rem;
     height: 1.8rem;
     background: url('../images/inpCheck.png') no-repeat;
-    background-position: 0 -3.6rem; 
+    background-position: 0 -3.6rem;
 }
 
-.recipe-con-total {  
-    position: relative;    
+.recipe-con-total {
+    position: relative;
     display: block;
-    width: 100%;  
+    width: 100%;
 }
+
 .recipe-con-buy {
     display: block;
     width: 100%;
@@ -2126,6 +2173,7 @@ body {
     padding: 8rem 0;
     background-color: #fbf5f1;
 }
+
 .review .container {
     height: 23.5rem;
 }
@@ -2235,8 +2283,9 @@ body {
     width: 90rem;
     height: 100%;
 }
-.sw-review {    
-}
+
+.sw-review {}
+
 .review-list {
     position: relative;
     display: block;
@@ -2252,18 +2301,21 @@ body {
     margin-bottom: 3rem;
 }
 
-.reivew-list-name {
+.review-list-name {
     display: block;
     width: 16.5rem;
     font-size: 1.7rem;
     font-weight: 700;
+    color: #000;
     letter-spacing: -0.0425rem;
     line-height: 1.47;
+
     /* 한줄 말줄임 */
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    
+
+    margin-bottom: 0.5rem;
 }
 
 .review-list-rating {
@@ -2276,6 +2328,7 @@ body {
     line-height: 1.176;
     background: url('../images/icoRating.png') no-repeat left center;
     padding-left: 2.5rem;
+    white-space: nowrap;
 }
 
 .review-list-img {
@@ -2299,14 +2352,14 @@ body {
 .review-list-txt {
     position: relative;
     display: block;
-    margin-bottom: 2rem;
     width: 100%;
-    height: 5.5rem;
+    height: 6rem;
     font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: -0.0325rem;
     line-height: 1.538;
     color: #000;
+
     /* 크롬에서 줄내림 ... 처리 */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2315,15 +2368,19 @@ body {
     -webkit-box-orient: vertical;
     word-wrap: break-word;
     white-space: normal;
-    
+
     margin-bottom: 2rem;
 }
 
 .review-list-user {
     position: relative;
     display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: -0.0325rem;
+    line-height: 1.538;
+    color: #000;
 }
-
 
 /* 커뮤니티 영역 */
 .community {
@@ -2332,10 +2389,12 @@ body {
     padding-top: 8rem;
     padding-bottom: 12rem;
 }
+
 .community .container {
     display: table;
     table-layout: fixed;
 }
+
 .com-box {
     position: relative;
     display: table-cell;
@@ -2389,19 +2448,20 @@ body {
 }
 
 /* 탭 메뉴 내용 리스트 */
-.com-news-list {    
+.com-news-list {
     position: absolute;
     left: 0;
     top: 0;
     display: none;
     width: 100%;
 }
+
 .com-news-list-active {
     display: block;
 }
 
 
-.com-news-list > li { 
+.com-news-list>li {
     position: relative;
     display: block;
     overflow: hidden;
@@ -2409,7 +2469,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.com-news-list > li > a {
+.com-news-list>li>a {
     display: block;
     float: left;
     font-size: 1.3rem;
@@ -2418,7 +2478,8 @@ body {
     letter-spacing: -0.0325rem;
     line-height: 1.461;
 }
-.com-news-list > li > span{
+
+.com-news-list>li>span {
     display: block;
     float: right;
     font-size: 1.3rem;
@@ -2455,12 +2516,15 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
 .com-info a {
     font-weight: 700;
 }
+
 .com-info b {
     font-weight: 700;
 }
+
 .com-link-wrap {
     position: relative;
     display: block;
@@ -2477,7 +2541,7 @@ body {
     line-height: 3.8rem;
     border: 1px solid #e4e4e4;
     background: url('../images/icoFaq.png') no-repeat;
-    
+
     background-position: calc(100% - 1.3rem) 50%;
 
     margin-bottom: 1rem;
@@ -2497,6 +2561,7 @@ body {
     position: relative;
     display: block;
 }
+
 .footer-top {
     position: relative;
     display: block;
@@ -2512,13 +2577,14 @@ body {
     overflow: hidden;
 }
 
-.footer-menu > li {
+.footer-menu>li {
     position: relative;
     display: block;
-    float: left;    
+    float: left;
     padding: 2rem 1rem;
 }
-.footer-menu > li::after {
+
+.footer-menu>li::after {
     content: '';
     position: absolute;
     right: 0;
@@ -2529,17 +2595,19 @@ body {
     background-color: #a8afb7;
 }
 
-.footer-menu > li:first-child {
+.footer-menu>li:first-child {
     padding-left: 0;
 }
-.footer-menu > li:last-child {
+
+.footer-menu>li:last-child {
     padding-right: 0;
 }
-.footer-menu > li:last-child::after {
+
+.footer-menu>li:last-child::after {
     content: none;
 }
 
-.footer-menu > li > a {
+.footer-menu>li>a {
     display: block;
     font-size: 1.3rem;
     font-weight: 400;
@@ -2563,10 +2631,12 @@ body {
     letter-spacing: -0.0325rem;
     line-height: 1.4615;
 }
+
 .sitemap a span {
     display: inline-block;
     width: 3rem;
 }
+
 .sitemap a::after {
     content: '';
     position: relative;
@@ -2593,14 +2663,14 @@ body {
 
 .copy-list {
     display: block;
-    font-size: 0rem;
+    font-size: 0;
     font-weight: 400;
     color: #666;
     letter-spacing: -0.0325rem;
     line-height: 1.69;
 }
 
-.copy-list span, 
+.copy-list span,
 .copy-list address {
     font-size: 1.3rem;
 }
@@ -2614,10 +2684,25 @@ body {
     font-weight: 400;
 }
 
+.copy-list address {
+    font-style: normal;
+}
+
 .copy-list span {
     position: relative;
     display: inline-block;
     padding: 0 1rem;
+}
+
+.copy-list span::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    display: block;
+    width: 0.1rem;
+    height: 1rem;
+    background-color: #e4e4e4;
 }
 
 .copy-list .no-sp {
@@ -2632,22 +2717,7 @@ body {
     content: none;
 }
 
-.copy-list span::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0.5rem;
-    display: block;
-    width: 0.1rem;
-    height: 1rem;
-    background-color: #e4e4e4;
-}
-
-.copy-list address{
-    font-style: normal;
-}
-
-.copy-list p {
+.copy p {
     font-size: 1.1rem;
     font-weight: 400;
     color: #999;
@@ -2669,22 +2739,86 @@ body {
     float: left;
     width: 2.6rem;
     height: 2.6rem;
-    background: url('../images//ftSns.png') no-repeat;
+    background: url('../images/ftSns.png') no-repeat;
+
     margin-left: 1rem;
 }
 
 .sns .i-ig {
     background-position: 0 -2.6rem;
 }
+
 .sns .i-fb {
     background-position: 0 0;
 }
+
 .sns .i-nb {
     background-position: 0 -5.2rem;
 }
+
 .sns .i-yt {
     background-position: 0 -7.8rem;
 }
+
 .sns .i-kk {
     background-position: 0 -10.4rem;
+}
+
+.sitemap-active {
+    background-color: #f4f4f4 !important;
+}
+
+.allmap {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    display: block;
+    width: 100%;
+    background-color: #f4f4f4;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+
+    display: none;
+}
+
+.allmap .container {    
+}
+
+.allmap-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url('../images/btnFamilyClose.png') no-repeat center;
+    cursor: pointer;
+    border: 0;
+    font-size: 0;
+}
+
+.allmap-list {
+    overflow: hidden;
+}
+.allmap-list > li {
+    float: left;
+    width: 20%;
+}
+.allmap-list p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    color: #76bd42;
+    letter-spacing: -0.0375rem;
+    margin-bottom: 1.4rem;
+}
+.allmap-list > li > ul {}
+.allmap-list > li > ul > li {}
+.allmap-list > li > ul > li > a {
+    display: inline-block;
+    line-height: 2.2rem;
+    color: #000;
+    font-size: 1.3rem;
+    letter-spacing: -0.0325rem;
+    font-weight: 400;
+
 }
